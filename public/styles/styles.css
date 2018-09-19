@@ -1,3 +1,8 @@
+body {
+  background-color: #90EE90;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
