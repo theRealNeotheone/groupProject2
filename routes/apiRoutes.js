@@ -2,23 +2,33 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // SELECT * from tablename;
+  app.get("/api/askanything/:question", function(req, res) { //api calls/routes
+    db.askanything.findAll({where: { question: req.params.question }}).then(function(dbaskanything) {
+      console.log(dbaskanything);
+      res.json(dbaskanything);
     });
   });
+
+    // ("api/search", (req, res) {
+    //   console.log(req)
+    //   findAll({
+    //     //construct search syntax
+    //   })
+    // })
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/askanything", function(req, res) {
+
+    var addToDB = {
+      question: req.body.text,
+      answer: req.body.description
+    };
+
+    db.askanything.create(addToDB).then(function(dbaskanything) {
+      res.json(dbaskanything);
     });
+
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
 };
