@@ -25,13 +25,19 @@ INSERT INTO askanything (question, answer)
 VALUES ("Node.js", "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.");
 
 INSERT INTO askanything (question, answer)
-VALUES ("Constructor", "In class-based object-oriented programming, a constructor (abbreviation: ctor) is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables. Immutable objects must be initialized in a constructor.")
+VALUES ("Nodemon", "A utility that will monitor for any changes in your source and automatically restart your server. Perfect for development. Install it using npm. Just use nodemon instead of node to run your code, and now your process will automatically restart when your code changes.");
+
+INSERT INTO askanything (question, answer)
+VALUES ("Constructor", "In class-based object-oriented programming, a constructor (abbreviation: ctor) is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables. Immutable objects must be initialized in a constructor.");
 
 INSERT INTO askanything (question, answer)
 VALUES ("Express.js", "Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.");
 
 INSERT INTO askanything (question, answer)
 VALUES ("MySQL", "MySQL is a freely available open source Relational Database Management System (RDBMS) that uses Structured Query Language (SQL). SQL is the most popular language for adding, accessing and managing content in a database.");
+
+INSERT INTO askanything (question, answer)
+VALUES ("Postman", "Contains a powerful runtime based on Node.js that allows you to add dynamic behavior to requests and collections. This allows you to write test suites, build requests that can contain dynamic parameters, pass data between requests, and a lot more.");
 
 INSERT INTO askanything (question, answer)
 VALUES("Handlebars", "A simple web template system with implementations available for ActionScript, C++, Clojure, CoffeeScript, ColdFusion, Common Lisp, D, Dart, Delphi, Erlang, Fantom, Go, Haskell, Io, Java, JavaScript, Julia, Lua, .NET, Objective-C, OCaml, Perl, PHP, Pharo, Python, R, Racket, Ruby, Rust, Scala, Smalltalk, Swift, Tcl, CFEngine and XQuery.");
