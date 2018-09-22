@@ -8,9 +8,12 @@ CREATE DATABASE testdb;
 CREATE TABLE askanything (
     id INT NOT NULL AUTO_INCREMENT,
     question VARCHAR(80) NULL,
-    answer VARCHAR,
+    answer VARCHAR(500),
     PRIMARY KEY (id)
 );
+
+INSERT INTO askanything (question, answer)
+VALUES ("Ajax", "A set of Web development techniques using many Web technologies on the client side to create asynchronous Web applications. With Ajax, Web applications can send and retrieve data from a server asynchronously without interfering with the display and behavior of the existing page");
 
 INSERT INTO askanything (question, answer)
 VALUES ("Recursion", "A technique for iterating over an operation by having a function call itself repeatedly until it arrives at a result. Most loops can be rewritten in a recursive style, and in some functional languages this approach to looping is the default.");
@@ -20,6 +23,9 @@ VALUES ("Callback function", "In computer programming, a callback, also known as
 
 INSERT INTO askanything (question, answer)
 VALUES ("Node.js", "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.");
+
+INSERT INTO askanything (question, answer)
+VALUES ("Constructor", "In class-based object-oriented programming, a constructor (abbreviation: ctor) is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables. Immutable objects must be initialized in a constructor.")
 
 INSERT INTO askanything (question, answer)
 VALUES ("Express.js", "Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.");
@@ -33,4 +39,6 @@ VALUES("Handlebars", "A simple web template system with implementations availabl
 INSERT INTO askanything (question, answer)
 VALUES ("Sequelize", "Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.");
 
+INSERT INTO askanything (question, answer)
+VALUES ("Heroku", "A cloud platform as a service supporting several programming languages. Heroku, one of the first cloud platforms, has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.");
 
