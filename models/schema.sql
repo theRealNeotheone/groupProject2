@@ -12,9 +12,9 @@ CREATE TABLE askanything (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE glossary (
+CREATE TABLE glossaries (
     id INT NOT NULL AUTO_INCREMENT,
-    term VARCHAR(80) NULL,
+    terminology VARCHAR(80) NULL,
     define VARCHAR(80) NULL,
     PRIMARY KEY (id)
 );
