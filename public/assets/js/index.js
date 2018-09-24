@@ -81,3 +81,6 @@ var handleFormSubmit = function (event) {
 // Add event listeners to the submit button
 $submitBtn.on("click", handleFormSubmit);
 
+$('.carousel').carousel({
+  interval: 2000
+});

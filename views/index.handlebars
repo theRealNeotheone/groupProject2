@@ -1,8 +1,8 @@
 <div class="image1">
-  <a href="https://www.google.com/" target="_blank"><img src="images/googlelogo.png" width="140" height="60" /></a>
+  <a href="https://www.google.com/" target="_blank"><img src="../assets/images/googlelogo.png" width="140" height="60" /></a>
 </div>
 <div class="image2">
-  <a href="https://stackoverflow.com/" target="_blank"><img src="images/pic2.png" width="180" height="100" /></a>
+  <a href="https://stackoverflow.com/" target="_blank"><img src="../assets/images/pic2.png" width="180" height="100" /></a>
 </div>
 <div id="home">
   <div class="container">
@@ -10,17 +10,36 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <div class="image3">
-          <a href="https://www.instagram.com/" target="_blank"><img src="images/dbinsta.png" width="60" height="60" /></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/dbinsta.png" width="60" height="60" /></a>
         </div>
-        <h2>To Visual Snippets</h2>
+        <h2>Coding Bootcamp Cheatsheet</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Ask anything bootcamp related!</label>
+            <label for="example-text">Ask Anything Coding Bootcamp Related!</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter a bootcamp question">
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+          <div class="dropdown" style="display:inline">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Example Keyword Questions
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">connect to server</a>
+    <a class="dropdown-item" href="#">for loop syntax</a>
+    <a class="dropdown-item" href="#">git create my own branch</a>
+    <a class="dropdown-item" href="#">create package.json</a>
+    <a class="dropdown-item" href="#">install dependencies if package.json exists</a>
+    <a class="dropdown-item" href="#">see files in folder</a>
+    <a class="dropdown-item" href="#">dummy text in html</a>
+    <a class="dropdown-item" href="#">comment out block of code</a>
+    <a class="dropdown-item" href="#">view source code in google browser</a>
+    <a class="dropdown-item" href="#">include YouTube videos in html</a>
+  </div>
+</div>
+
+          <button id="submit" class="btn btn-primary float-right">Answers</button>
         </form>
-        <h3>Results:</h3>
+        <h3>Coding Snippets:</h3>
         <ul id="example-list" class="list-group">
         </ul>
       </div>
@@ -28,5 +47,19 @@
   </div>
 </div>
 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../assets/images/ucdbootcamp.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/images/code.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/images/computerroom.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="../assets/js/index.js"></script>
