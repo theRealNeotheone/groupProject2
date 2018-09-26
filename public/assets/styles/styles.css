@@ -22,4 +22,17 @@ body {
  float: right;
  margin-right: 280px;
 }
+.image3:hover{
+  opacity:0.4;
+  background-color: aqua;
 
+}
+.image1:hover{
+  opacity: 0.4;
+  background-color: aqua;
+ 
+}
+.image2:hover{
+  opacity: 0.4;
+  background-color: aqua;
+}
