@@ -2,6 +2,7 @@
 var $exampleText = $("#example-text");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var searchHistoryArray = []; 
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -32,6 +33,10 @@ var API = {
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function(searchString) {
+
+  searchHistoryArray.push(searchString); // add new items to array
+      localStorage.setItem("history", JSON.stringify(searchHistoryArray));
+
   API.getExamples(searchString).then(function(data) {
     console.log("OG GET DATA: ", data);
     var $examples = data.map(function(example) {
@@ -79,11 +84,84 @@ var handleFormSubmit = function(event) {
 };
 
 // Add event listeners to the submit button
+// $(".dropdown-menu").change(function () {
+//   var str = "";
+
+//   $("#serverconnect").each(function() {
+//     str += $( this ).text() + " ";
+//   });
+
+//   $( "#example-text" ).text( str );
+// }).change();
+
 $submitBtn.on("click", handleFormSubmit);
 
 $(".carousel").carousel({
   interval: 2000
 });
+
+
+
+
+$(document).ready(function(){
+  
+  var codeQ1 = $( "#serverconnect").text();
+  $("#serverconnect").click(function(){
+  $("#example-text").val(codeQ1);
+  });
+
+  var codeQ2 = $( "#loop").text();
+  $("#loop").click(function(){
+  $("#example-text").val(codeQ2);
+  });
+
+  var codeQ3 = $( "#git").text();
+  $("#git").click(function(){
+  $("#example-text").val(codeQ3);
+  });
+
+  var codeQ4 = $( "#package").text();
+  $("#package").click(function(){
+  $("#example-text").val(codeQ4);
+  });
+
+  var codeQ5 = $( "#dependencies").text();
+  $("#dependencies").click(function(){
+  $("#example-text").val(codeQ5);
+  });
+
+  var codeQ6 = $( "#files").text();
+  $("#files").click(function(){
+  $("#example-text").val(codeQ6);
+  });
+
+  var codeQ7 = $( "#dummy").text();
+  $("#dummy").click(function(){
+  $("#example-text").val(codeQ7);
+  });
+
+  var codeQ8 = $( "#comment").text();
+  $("#comment").click(function(){
+  $("#example-text").val(codeQ8);
+  });
+
+  var codeQ9 = $( "#sourcecode").text();
+  $("#sourcecode").click(function(){
+  $("#example-text").val(codeQ9);
+  });
+
+  var codeQ10 = $( "#youtube").text();
+  $("#youtube").click(function(){
+  $("#example-text").val(codeQ10);
+  });
+
+
+});
+
+
+
+
+
 
 /*var searchHistory = require("../../../models/searchHistory");
 
