@@ -5,7 +5,7 @@ var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function (example) {
+  saveExample: function(example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -15,26 +15,26 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function (searchString) {
+  getExamples: function(searchString) {
     return $.ajax({
       url: "api/askanything/" + encodeURIComponent(searchString),
       type: "GET"
     });
   },
-  searchExamples: function (search) {
+  searchExamples: function(search) {
     return $.ajax({
       url: "api/search",
       type: "GET",
       data: search
-    })
+    });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function (searchString) {
-  API.getExamples(searchString).then(function (data) {
-    console.log('OG GET DATA: ', data)
-    var $examples = data.map(function (example) {
+var refreshExamples = function(searchString) {
+  API.getExamples(searchString).then(function(data) {
+    console.log("OG GET DATA: ", data);
+    var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.answer)
         .attr("href", "/askanything/" + example.id);
@@ -47,7 +47,7 @@ var refreshExamples = function (searchString) {
         .append($a);
       return $li;
     });
-    console.log('AFTER MAP:', $examples)
+    console.log("AFTER MAP:", $examples);
 
     $exampleList.empty();
     $exampleList.append($examples);
@@ -56,7 +56,7 @@ var refreshExamples = function (searchString) {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function (event) {
+var handleFormSubmit = function(event) {
   event.preventDefault();
   refreshExamples($exampleText.val().trim());
   return;
@@ -81,6 +81,38 @@ var handleFormSubmit = function (event) {
 // Add event listeners to the submit button
 $submitBtn.on("click", handleFormSubmit);
 
-$('.carousel').carousel({
+$(".carousel").carousel({
   interval: 2000
 });
+
+/*var searchHistory = require("../../../models/searchHistory");
+
+function showSearchHistory() {
+  // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+  $.ajax({ url: "/api/searchhistory", method: "GET" })
+    .then(function(searchHistory) {
+
+      // Here we then log the searchHistory to console, where it will show up as an object.
+      console.log(searchHistory);
+      console.log("------------------------------------");
+
+      // Loop through and display each of the customers
+      for (var i = 0; i < searchHistory.length; i++) {
+
+        // Get a reference to the glossaryList element and populate it with tables
+        var glossaryList = $("#glossaryList");
+
+        // Then display the fields in the HTML (Section Name, Date, URL)
+        var listItem = $("<li class='list-group-item mt-4'>");
+
+        listItem.append(
+          $("<h2>").text("Search #" + (i + 1)),
+          $("<hr>"),
+          $("<h2>").text("Question: " + searchHistory[i].codeQuestion),
+          $("<h2>").text("Code Snippet: " + searchHistory[i].codeAnswer),
+        );
+
+        glossaryList.append(listItem);
+      }
+    });
+}*/
