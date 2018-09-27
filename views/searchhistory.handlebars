@@ -2,36 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-
-
-
-
-
-
-<div class="card">
+        <div class="card">
           <div class="card-header">
             <h3 style="color: black;">Search History:</h3>
           </div>
           <div class="card-body">
             <ul id="glossaryList" class="list-group"></ul>
           </div>
-</div>
-
-        <ul id="searchhistory-list" class="list-group">
-          
-        </ul>
-
-
-
+        </div>
+        <ul id="searchhistory-list" class="list-group"></ul>
         <script>
-  var historyArray = JSON.parse(localStorage.getItem("history"));
-  historyArray.forEach(function(item) {
-    $('#searchhistory-list').append('<li>' + item + "</li>");
-  });
-</script>
-
-
-
+          var historyArray = JSON.parse(localStorage.getItem("history"));
+          historyArray.forEach(function (item) {
+            $('#searchhistory-list').append('<li>' + item + "</li>");
+          });
+        </script>
       </div>
     </div>
   </div>

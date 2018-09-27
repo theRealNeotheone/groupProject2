@@ -1,15 +1,15 @@
 # groupProject2
 
-## A custom search engine and/or visual code snippet log. This project uses Node.js, MySQL, Express.js, Handlebars, and Sequelize using an MVC design pattern.
+## A custom search engine and visual code snippet log, aimed strictly towards Bootcamp success. This project uses Node.js, MySQL, Express.js, Handlebars, and Sequelize using the MVC design pattern.
 
 ## Installs
-npm install require("body-parser", "express", "path", "express-handlebars", "mysql", "mysql2")
+npm install require("body-parser", "express", "path", "express-handlebars", "mysql", "mysql2", "sequelize")
 
-## Framework
-Built With Bootstrap
+## Styling Frameworks
+Built With Bootstrap & Materialize
 
 ## Authors:
-Matthew Bower, Abdullah Wafy, Hazrat, & Farhadjan
+Matthew Bower, Abdullah Wafy, Hazrat Najafi, & Farhadjan Aimaq
 
 ## License:
 This project is licensed under the MIT License - see the LICENSE.md file for details
